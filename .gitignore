@@ -3,6 +3,10 @@
 *.lo
 *.o
 *.obj
+*.depend
+*.layout
+/bin/
+/obj/
 
 # Precompiled Headers
 *.gch
