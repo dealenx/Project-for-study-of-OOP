@@ -3,13 +3,13 @@
 using namespace std;
 
 
-int main(void) {
+int main(int argc, char const *argv[]) {
     int n = 4;
     bool error[n];
-    Movie *obj = new Movie("weq","qwe","qwe",10,error[1],true);
+    Movie * obj = new Movie();
 
-    cout<<obj -> GetTitle();
-
-
+    cout << obj -> GetDirectedBy();
     delete obj; obj = NULL;
+    return 0;
+
 }

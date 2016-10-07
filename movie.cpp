@@ -24,12 +24,13 @@ char * Movie::GetCountry() {
 
 void Movie::SetDirectedBy(char lDirectedBy[256], bool&errorVar) {
     if(viewVar) {cout << "// SetDirectedBy" << endl;}
-    strcpy(directedBy, lDirectedBy);
+    objDirectedBy -> SetFullName(lDirectedBy, errorVar);
     errorVar = false;
 }
 char * Movie::GetDirectedBy() {
     if(viewVar) {cout << "// GetDirectedBy" << endl;}
-    return directedBy;
+
+    return objDirectedBy -> GetFullName();
 }
 
 void Movie::SetYear(int lYear, bool&errorVar) {
@@ -41,20 +42,26 @@ char Movie::GetYear() {
     return year;
 }
 
+void Movie::Init(char fTitle[256], char fCountry[256], char fDirectedBy[256], int fYear,bool&errorVar) {
+  if(viewVar) {cout << "// Movie::Init" << endl;}
+  objDirectedBy = new Vacancy("Directed By", "<noname>",errorVar);
+  SetTitle(fTitle,errorVar); if(errorVar != 0) {return;}
+  SetCountry(fCountry,errorVar); if(errorVar != 0) {return;}
+  SetDirectedBy(fDirectedBy,errorVar); if(errorVar != 0) {return;}
+  SetYear(fYear,errorVar); if(errorVar != 0) {return;}
 
-Movie::Movie(bool fViewVar) {
-    viewVar = fViewVar; if(viewVar) {cout << "// Movie::Movie Default" << endl;}
-    strcpy(title, "<TITLE>");
-    strcpy(country, "<COUNTRY>");
-    strcpy(directedBy, "<DIRECTEDBY>");
-    year = 1895;
 }
 
-Movie::Movie(char fTitle[256], char fCountry[256], char fDirectedBy[256], int fYear,bool&errorVar,bool fViewVar) {
-    viewVar = fViewVar; if(viewVar) {cout << "// Movie::Movie SETTER" << endl;}
-    SetTitle(fTitle,errorVar); if(errorVar != 0) {return;}
-    SetCountry(fCountry,errorVar); if(errorVar != 0) {return;}
-    SetDirectedBy(fDirectedBy,errorVar); if(errorVar != 0) {return;}
-    SetYear(fYear,errorVar); if(errorVar != 0) {return;}
+Movie::Movie() {
+    bool errorVar = false;
+    if(viewVar) {cout << "// Movie::Movie Default" << endl;}
+
+    Init("<TITLE>", "<COUNTRY>", "<noname>", 1895,errorVar);
+
+}
+
+Movie::Movie(char fTitle[256], char fCountry[256], char fDirectedBy[256], int fYear,bool&errorVar) {
+    if(viewVar) {cout << "// Movie::Movie SETTER" << endl;}
+    Init(fTitle, fCountry, fDirectedBy, fYear,errorVar);
 
 }
