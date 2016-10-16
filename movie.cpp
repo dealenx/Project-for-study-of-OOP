@@ -29,8 +29,8 @@ void Movie::SetDirectedBy(char lDirectedBy[256], bool&errorVar) {
 }
 char * Movie::GetDirectedBy() {
     if(viewVar) {cout << "// GetDirectedBy" << endl;}
-
-    return objDirectedBy -> GetFullName();
+    strcpy(directedBy,objDirectedBy -> GetFullName());
+    return directedBy;
 }
 
 void Movie::SetYear(int lYear, bool&errorVar) {

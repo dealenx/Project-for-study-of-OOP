@@ -16,7 +16,7 @@ char * Vacancy::GetTitle() {
 
 void Vacancy::SetFullName(char lFullName[256], bool&errorVar) {
     if(viewVar) {cout << "// SetFullName" << endl;}
-    strcpy(title, lFullName);
+    strcpy(fullName, lFullName);
     errorVar = false;
 }
 char * Vacancy::GetFullName() {

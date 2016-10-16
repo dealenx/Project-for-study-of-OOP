@@ -17,7 +17,7 @@ using namespace std;
 class Movie{
     private:
         Vacancy * objDirectedBy;
-        char title[256], country[256];
+        char title[256], country[256], directedBy[256];
         int year;
         char name[256];
         bool viewVar = true;
