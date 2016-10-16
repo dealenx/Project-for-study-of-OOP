@@ -12,8 +12,6 @@ using namespace std;
 #ifndef MOVIE_H_INCLUDED
 #define MOVIE_H_INCLUDED
 
-
-
 class Movie{
     private:
         Vacancy * objDirectedBy;

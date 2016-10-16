@@ -22,6 +22,7 @@ char * Movie::GetCountry() {
     return country;
 }
 
+
 void Movie::SetDirectedBy(char lDirectedBy[256], bool&errorVar) {
     if(viewVar) {cout << "// SetDirectedBy" << endl;}
     objDirectedBy -> SetFullName(lDirectedBy, errorVar);

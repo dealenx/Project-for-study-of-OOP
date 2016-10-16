@@ -8,6 +8,7 @@ class Vacancy {
         char fullName[256];
         bool viewVar = true;
 
+
         void Init(char fTitle[256],char fFullname[256],bool&errorVar);
     public:
         void SetTitle(char lTitle[256], bool&errorVar);

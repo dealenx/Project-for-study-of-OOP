@@ -31,6 +31,7 @@ void Vacancy::Init(char fTitle[256],char fFullName[256],bool&errorVar) {
 
 }
 
+
 Vacancy::Vacancy() {
     bool errorVar = false;
     if(viewVar) {cout << "// Vacancy::Vacancy() Default" << endl;}

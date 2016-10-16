@@ -4,6 +4,7 @@ using namespace std;
 
 
 int main(int argc, char const *argv[]) {
+
     int n = 4;
     bool error[n];
     Movie * obj = new Movie();
@@ -11,5 +12,4 @@ int main(int argc, char const *argv[]) {
     cout << obj -> GetDirectedBy();
     delete obj; obj = NULL;
     return 0;
-
 }
