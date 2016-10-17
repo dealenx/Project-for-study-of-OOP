@@ -37,6 +37,8 @@
 		<Unit filename="movie.h" />
 		<Unit filename="vacancy.cpp" />
 		<Unit filename="vacancy.h" />
+		<Unit filename="vote.cpp" />
+		<Unit filename="vote.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
