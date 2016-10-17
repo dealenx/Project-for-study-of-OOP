@@ -6,6 +6,7 @@
 #include <string.h>
 
 #include "vacancy.h"
+#include "vote.h"
 
 using namespace std;
 
