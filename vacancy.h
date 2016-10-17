@@ -6,6 +6,7 @@ class Vacancy {
     private:
         char title[256];
         char fullName[256];
+        int rating;
         bool viewVar = true;
 
 

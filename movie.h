@@ -16,8 +16,11 @@ using namespace std;
 class Movie{
     private:
         Vacancy * objDirectedBy;
+        Vote * objVote;
         char title[256], country[256], directedBy[256];
         int year;
+        float rating;
+        char about[256];
         char name[256];
         bool viewVar = true;
         void Init(char fTitle[256], char fCountry[256], char fDirectedBy[256], int fYear,bool&errorVar);
@@ -35,8 +38,15 @@ class Movie{
         void SetYear(int lYear, bool&errorVar);
         char GetYear();
 
+        void SetVoteRating(int* , int );
+        float GetVoteRating();
+
+        void SetAbout(float);
+        char * GetAbout();
+
         Movie();
         Movie(char fTitle[256], char fCountry[256], char fDirectedBy[256], int year,bool&errorVar);
+        ~Movie();
 
 };
 

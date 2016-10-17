@@ -9,19 +9,17 @@ int main(int argc, char const *argv[]) {
     int n = 4;
     bool error[n];
     int *votes = new int[n];
-    int votes2[4];
     votes[0] = 6;
-    votes[1] = 12;
+    votes[1] = 10;
     votes[2] = 6;
-    votes[3] = 12;
-    /*
+    votes[3] = 10;
+
     Movie * obj = new Movie();
 
-    cout << obj -> GetDirectedBy();
-    delete obj; obj = NULL;*/
-    Vote * obj = new Vote(votes, n);
+    obj -> SetVoteRating(votes, n);
+    cout << obj -> GetVoteRating() << endl;
 
-    cout << obj -> GetRating();
+    cout << endl << obj -> GetAbout() << endl << endl;
 
     delete obj; obj = NULL;
 
