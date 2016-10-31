@@ -7,6 +7,8 @@
 
 #include "vacancy.h"
 #include "vote.h"
+#include "serials.h"
+#include "docmovie.h"
 
 using namespace std;
 
@@ -22,7 +24,6 @@ class Movie{
         float rating;
         char about[256];
         char name[256];
-        bool viewVar = true;
         void Init(char fTitle[256], char fCountry[256], char fDirectedBy[256], int fYear,bool&errorVar);
 
     public:
@@ -47,6 +48,9 @@ class Movie{
         Movie();
         Movie(char fTitle[256], char fCountry[256], char fDirectedBy[256], int year,bool&errorVar);
         ~Movie();
+
+    protected:
+        bool viewVar = true;
 
 };
 

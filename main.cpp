@@ -14,7 +14,7 @@ int main(int argc, char const *argv[]) {
     votes[2] = 6;
     votes[3] = 10;
 
-    Movie * obj = new Movie();
+    Serials * obj = new Serials();
 
     obj -> SetVoteRating(votes, n);
     cout << obj -> GetVoteRating() << endl;

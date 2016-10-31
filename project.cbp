@@ -32,9 +32,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="docmovie.cpp" />
+		<Unit filename="docmovie.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="movie.cpp" />
 		<Unit filename="movie.h" />
+		<Unit filename="serials.cpp" />
+		<Unit filename="serials.h" />
 		<Unit filename="vacancy.cpp" />
 		<Unit filename="vacancy.h" />
 		<Unit filename="vote.cpp" />
